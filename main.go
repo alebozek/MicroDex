@@ -1,25 +1,35 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"strings"
+
+	"github.com/m7shapan/njson"
 )
 
 type requestedPokemon struct {
-	Name   string `json:"name"`
-	ID     int    `json:"id"`
-	Height int    `json:height`
-	Weight int    `json:weight`
+	Name   string `njson:"name"`
+	ID     int    `njson:"id"`
+	Height int    `njson:"height"`
+	Weight int    `njson:"weight"`
+	Type_1 string `njson:"types.0.type.name"`
+	Type_2 string `njson:"types.1.type.name"`
 }
 
-func show(name string, id, height, weight int) {
-	fmt.Println("Name:", strings.Title(name))
-	fmt.Println("ID:", id)
-	fmt.Println("Height:", height*10, "cm")
-	fmt.Println("Weight", weight)
+func show(pokemon requestedPokemon) {
+	fmt.Println("Name:", strings.Title(pokemon.Name))
+	fmt.Println("ID:", pokemon.ID)
+	fmt.Println("Height:", pokemon.Height*10, "cm")
+	fmt.Println("Weight:", pokemon.Weight, "kg")
+	if pokemon.Type_2 == "" {
+		fmt.Println("Type:", strings.Title(pokemon.Type_1))
+	} else {
+		fmt.Println("Type 1:", strings.Title(pokemon.Type_1))
+		fmt.Println("Type 2:", strings.Title(pokemon.Type_2))
+	}
 }
 
 func main() {
@@ -39,8 +49,14 @@ func main() {
 	defer r1.Body.Close()
 	pokejson := requestedPokemon{}
 
-	if err := json.NewDecoder(r1.Body).Decode(&pokejson); err != nil {
+	json, err := ioutil.ReadAll(r1.Body)
+	if err != nil {
+		log.Fatal("An error ocurred. Error output:", err)
+	}
+
+	if err := njson.Unmarshal(json, &pokejson); err != nil {
 		fmt.Println(err)
 	}
-	show(pokejson.Name, pokejson.ID, pokejson.Height, pokejson.Weight)
+
+	show(pokejson)
 }
