@@ -11,16 +11,17 @@ import (
 )
 
 type requestedPokemon struct {
-	Name   string `njson:"name"`
-	ID     int    `njson:"id"`
-	Height int    `njson:"height"`
-	Weight int    `njson:"weight"`
-	Type_1 string `njson:"types.0.type.name"`
-	Type_2 string `njson:"types.1.type.name"`
+	Name   string   `njson:"name"`
+	ID     int      `njson:"id"`
+	Height int      `njson:"height"`
+	Weight int      `njson:"weight"`
+	Type_1 string   `njson:"types.0.type.name"`
+	Type_2 string   `njson:"types.1.type.name"`
+	Moves  []string `njson:"moves.#.move.name"`
 }
 
 func show(pokemon requestedPokemon) {
-	fmt.Println("Name:", strings.Title(pokemon.Name))
+	fmt.Println("\nName:", strings.Title(pokemon.Name))
 	fmt.Println("ID:", pokemon.ID)
 	fmt.Println("Height:", pokemon.Height*10, "cm")
 	fmt.Println("Weight:", pokemon.Weight, "kg")
@@ -30,6 +31,11 @@ func show(pokemon requestedPokemon) {
 		fmt.Println("Type 1:", strings.Title(pokemon.Type_1))
 		fmt.Println("Type 2:", strings.Title(pokemon.Type_2))
 	}
+	fmt.Println("\n##MOVES##")
+	for i := 0; i < len(pokemon.Moves); i++ {
+		fmt.Printf("Move[%d]: %v \n", i, strings.Title(pokemon.Moves[i]))
+	}
+
 }
 
 func main() {
