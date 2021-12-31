@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"alonso.com/pokemon"
+	"alonso.com/microdex"
 )
 
 func main() {
-	Poke := pokemon.CreatePokemon("Charmander")
+	Poke := microdex.CreatePokemon("Charmander")
 	fmt.Println(Poke.Moves)
 }
