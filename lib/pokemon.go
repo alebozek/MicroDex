@@ -1,4 +1,4 @@
-package pokemon
+package microdex
 
 import (
 	"fmt"
