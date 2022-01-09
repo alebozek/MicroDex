@@ -16,11 +16,11 @@ It's very easy to use, just get the library, import it and create a Pokemon obje
 
 And that's it, ill show a little demo down here just to show the attributes available in a pokemon object. (I'll try to add everything in the api but, for now I have this).
 
-``package main
+``
+package main
 
 import (
 	"fmt"
-
 	microdex "github.com/404a10/MicroDex"
 )
 
@@ -193,4 +193,5 @@ Type: Normal
 - 124 - Snarl
 - 125 - Confide
 +-------------------------+
+
 ``
