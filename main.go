@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-
-	"alonso.com/microdex"
+	"github.com/404a10/MicroDex"
 )
 
 func show(pokemon microdex.Pokemon) {
