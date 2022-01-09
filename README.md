@@ -5,11 +5,9 @@ MicroDex is a golang library based on the RESTful api PokeAPI(https://pokeapi.co
 In this API I only offer the opportunity to get information about this creatures called pokemon and it's stats.
 It's very easy to use, just get the library, import it and create a Pokemon object.
 
----
+
 ## Getting the library
 ``go get -u github.com/404a10/MicroDex``
-
----
 
 ## Create a Pokemon object
 ``Charizard := microdex.CreatePokemon("Charizard")``
@@ -23,3 +21,7 @@ And that's it, I'll leave a little demo on the demo folder just to show the attr
 - Weight
 - Types
 - Moves
+
+### TO DO
+- [ ] Get every attribute on the PokeAPI API about pokemon
+- [ ] Add berries to the API
