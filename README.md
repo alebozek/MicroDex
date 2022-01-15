@@ -2,8 +2,8 @@
 
 MicroDex is a golang library based on the RESTful api PokeAPI(https://pokeapi.co/), it offers plenty of information about pokemon, berries, evolutions and so much more about this universe.
 
-In this API I only offer the opportunity to get information about this creatures called pokemon and it's stats.
-It's very easy to use, just get the library, import it and create a Pokemon object.
+In this library I can only offer the opportunity to get information about this creatures called pokemon and it's stats.
+
 
 
 ## Getting the library
