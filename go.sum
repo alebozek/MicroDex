@@ -1,0 +1,14 @@
+github.com/404a10/MicroDex v0.0.0-20220112185421-34d563b171a4 h1:Slv0JG+mg+BpM3LLhfcNYLJoZkRVaijIB9xjGppkwPI=
+github.com/404a10/MicroDex v0.0.0-20220112185421-34d563b171a4/go.mod h1:LgDXntOjIAppybT2dFmpw+NgybBdJIyS/dIN6vQ1fLk=
+github.com/google/go-cmp v0.5.6 h1:BKbKCqvP6I+rmFHt06ZmyQtvB8xAkWdhFyr0ZUNZcxQ=
+github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
+github.com/m7shapan/njson v1.0.7 h1:BerKOrRTlx1NiP9mXwtnd6+mkjUCbdtY0tn8sW87NIM=
+github.com/m7shapan/njson v1.0.7/go.mod h1:h3P0qmwsv8+s+cE07cXuTgtyKCrBIAEUger0hA71Fy0=
+github.com/tidwall/gjson v1.12.1 h1:ikuZsLdhr8Ws0IdROXUS1Gi4v9Z4pGqpX/CvJkxvfpo=
+github.com/tidwall/gjson v1.12.1/go.mod h1:/wbyibRr2FHMks5tjHJ5F8dMZh3AcwJEMf5vlfC0lxk=
+github.com/tidwall/match v1.1.1 h1:+Ho715JplO36QYgwN9PGYNhgZvoUSc9X2c80KVTi+GA=
+github.com/tidwall/match v1.1.1/go.mod h1:eRSPERbgtNPcGhD8UCthc6PmLEQXEWd3PRB5JTxsfmM=
+github.com/tidwall/pretty v1.2.0 h1:RWIZEg2iJ8/g6fDDYzMpobmaoGh5OLl4AXtGUGPcqCs=
+github.com/tidwall/pretty v1.2.0/go.mod h1:ITEVvHYasfjBbM0u2Pg8T2nJnzm8xPwvNhhsoaGGjNU=
+golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543 h1:E7g+9GITq07hpfrRu66IVDexMakfv52eLZ2CXBWiKr4=
+golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
