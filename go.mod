@@ -1,4 +1,4 @@
-module github.com/404a10/microdex
+module github.com/404a10/MicroDex
 
 go 1.15
 
